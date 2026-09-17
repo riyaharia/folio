@@ -28,7 +28,6 @@ Create a migration after changing SQLAlchemy models:
 ```bash
 uv run alembic revision --autogenerate -m "add document tables"
 ```
-
 Always review the generated migration. Add explicit operations for Supabase/Postgres features that autogenerate cannot reliably infer:
 
 - `create extension if not exists vector`
@@ -40,6 +39,7 @@ Always review the generated migration. Add explicit operations for Supabase/Post
 Apply migrations:
 
 ```bash
+
 uv run alembic upgrade head
 ```
 
